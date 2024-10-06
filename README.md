@@ -42,7 +42,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github repository solution URL here](https://github.com/hadodev/PingComingSoonPage)
-- Live Site URL: [Live site URL here](https://hadodev.github.io//PingComingSoonPage)
+- Live Site URL: [Live site URL here](https://hadodev.github.io/PingComingSoonPage)
 
 ## My process
 
