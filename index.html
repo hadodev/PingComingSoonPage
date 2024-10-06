@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="/public/assets/css/style.css" />
+    <link rel="stylesheet" href="/public/assets/css/contact.css">
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body>
+    <main class="ping">
+      <img src="./public/assets/images/logo.svg" alt="ping logo" />
+      <h1 class="ping__title"><span>We are launching </span>soon!</h1>
+      <p>Subscribe and get notified</p>
+      <form action="#" class="ping__form" id="ping__form" novalidate>
+        <div class="ping__email">
+          <input type="email" name="email" id="email" placeholder="Your email address..." autocomplete="off" />
+          <span class="ping__emailFeedback hidden">Please provide a valid email address</span>
+        </div>
+        <button type="submit" id="ping__submit">Notify Me</button>
+      </form>
+      <img class="ping__img" src="./public/assets/images/illustration-dashboard.png" alt="illustration dashboard" />
+    </main>
+    <footer class="ping__footer">
+      <div class="ping__footer__socialMedia">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <p class="ping__footer__copyright">&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+    <aside class="contact">
+      <a href="https://www.frontendmentor.io/" target="_blank" rel="noopener noreferrer">
+        <img src="/public/assets/images/contact/frontend-mentor-logo.png" alt="Frontend Mentor logo" />
+        <span>Challenge by Fronted Mentor</span>
+      </a>
+      <a href="https://www.frontendmentor.io/profile/hadodev" target="_blank" rel="noopener noreferrer">
+        <img src="/public/assets/images/contact/HadoDev-square-black-blue.png" alt="Hado Dev logo" />
+        <span>Coded by HaDo Dev</span>
+      </a>
+      <a href="https://github.com/hadodev" target="_blank" rel="noopener noreferrer">
+        <img src="/public/assets/images/contact/github-logo-72.png" alt="github logo" />
+        <span>HaDo Dev github profile</span>
+      </a>
+      <a href="mailto:hado.dev.app@gmail.com">
+        <img src="/public/assets/images/contact/gmail-logo-72.png" alt="mail" />
+        <span>HaDo Dev gmail</span>
+      </a>
+    </aside>
+
+    <script src="https://kit.fontawesome.com/5dc20c8ed2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/assets/js/vendors/validator.min.js"></script>
+    <script src="./public/assets/js/scripts.js"></script>
+  </body>
+</html>

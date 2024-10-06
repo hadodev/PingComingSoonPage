@@ -1,0 +1,199 @@
+@import url(_font.css);
+@import url(_reset.css);
+
+:root {
+  /* fonts */
+  --fw-regular: 300;
+  --fw-bold: 600;
+  --fw-black: 700;
+
+  /* fonts sizes */
+  /* Step -2: 12.5px → 12.8px */
+  --fs-step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  /* Step -1: 15px → 16px */
+  --fs-step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  /* Step 0: 18px → 20px */
+  --fs-step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  /* Step 1: 21.6px → 25px */
+  --fs-step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  /* Step 2: 25.92px → 31.25px */
+  --fs-step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  /* Step 3: 31.104px → 39.0625px */
+  --fs-step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  /* Step 4: 37.3248px → 48.8281px */
+  --fs-step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  /* Step 5: 44.7898px → 61.0352px */
+  --fs-step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+
+  /* colors */
+  /* ### Primary */
+  --clr-primary-blue: hsl(223, 87%, 63%);
+  /* ### Secondary */
+  --clr-secondary-pale-blue: hsl(223, 100%, 88%);
+  --clr-secondary-light-red: hsl(354, 100%, 66%);
+  /* ### Neutral */
+  --clr-neutral-gray: hsl(0, 0%, 59%);
+  --clr-neutral-very-dark-blue: hsl(209, 33%, 12%);
+}
+
+body {
+  display: grid;
+  margin: 2em;
+
+  color: var(--clr-neutral-gray);
+
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-step--1);
+  font-family: "Libre Franklin", sans-serif;
+
+  place-items: center;
+}
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+
+.ping {
+  display: grid;
+  justify-items: center;
+
+  width: clamp(350px, 90vw, 600px);
+  margin-block-start: 3rem;
+
+  .ping__title {
+    color: var(--clr-neutral-very-dark-blue);
+    font-size: var(--fs-step-3);
+    margin-block-start: 3rem;
+    span {
+      color: var(--clr-neutral-gray);
+      font-weight: var(--fw-regular);
+    }
+  }
+
+  p {
+    color: var(--clr-neutral-very-dark-blue);
+    margin-block-start: 1rem;
+  }
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    margin-block-start: 2rem;
+    container-type: inline-size;
+
+    .ping__email {
+      flex: 1 1 max(300px, 60%);
+
+      input[type="email"] {
+        width: 100%;
+        padding: 1rem;
+
+        color: var(--clr-neutral-very-dark-blue);
+
+        border: 1px solid var(--border-color);
+        border-radius: 3rem;
+        --border-color: var(--clr-secondary-pale-blue);
+        &::placeholder {
+          color: var(--clr-secondary-pale-blue);
+        }
+      }
+      .ping__emailFeedback {
+        bottom: -0.5rem;
+
+        display: block;
+
+        color: red;
+        font-size: var(--fs-step--2);
+        font-style: italic;
+        padding-inline: 1rem;
+        padding-block: 0.5rem;
+
+        @container (width <= calc(300px / .6 * .9)) {
+            text-align: center;
+        }
+      }
+
+      input[type="email"]:focus,
+      input[type="email"]:focus-visible {
+        --border-color: var(--clr-primary-blue);
+        outline: var(--border-color) solid 1px;
+      }
+    }
+
+    button {
+      flex: 1 1 30%;
+      height: min-content;
+      padding: 1rem;
+
+      color: white;
+      font-weight: var(--fw-bold);
+
+      background-color: var(--clr-primary-blue);
+      border: 0;
+      border-radius: 3rem;
+      box-shadow: 0 8px 15px 5px var(--clr-secondary-pale-blue);
+      cursor: pointer;
+
+      &:hover,
+      &:focus-visible {
+        background-color: hsl(from var(--clr-primary-blue) h s l / 0.8);
+        outline: none;
+      }
+    }
+  }
+  .ping__img {
+    margin-block-start: 5rem;
+  }
+}
+
+.ping__footer {
+  margin-block-start: 10rem;
+  margin-block-end: 1rem;
+
+  text-align: center;
+
+  .ping__footer__socialMedia {
+    display: flex;
+    place-content: center;
+
+    gap: 1rem;
+    margin-block-end: 2rem;
+
+    a {
+        text-decoration: none;
+        i {
+          --border-color: var(--clr-secondary-pale-blue);
+          display: grid;
+          width: 2rem;
+          height: 2rem;
+          padding: 1rem;
+
+          color: var(--clr-primary-blue);
+
+          border: 1px solid var(--border-color);
+          border-radius: 50%;
+          place-content: center;
+    
+        }
+        &:hover,
+        &:focus-visible {
+            outline: none;
+            i {
+                color: white;                
+
+                background-color: var(--clr-primary-blue);
+                --border-color: var(--clr-primary-blue);
+            }
+        }
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
